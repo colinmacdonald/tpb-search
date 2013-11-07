@@ -1,4 +1,3 @@
-tpb-search
-==========
+# TPB Search
 
-TPB search
+TPB Search
