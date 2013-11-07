@@ -1,0 +1,15 @@
+{
+  "name": "node-boilerplate",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "~3.2.5",
+    "ejs": "~0.8.4",
+    "json-config": "0.0.1",
+    "ejs-locals": "~1.0.2",
+    "auto-loader": "0.0.9",
+    "async": "0.2.9",
+    "lodash": "2.2.1",
+    "connect-redis": "1.4.5"
+  }
+}
