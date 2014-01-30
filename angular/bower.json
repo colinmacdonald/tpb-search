@@ -1,0 +1,21 @@
+{
+  "name": "angular-tutorial",
+  "main": "index.html",
+  "version": "1.0.1",
+  "homepage": "https://github.com/goinstant/chat",
+
+  "dependencies": {
+    "angular": "v1.2.10",
+    "angular-route": "v1.2.10",
+    "lodash": "2.4.1"
+  },
+
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
+
