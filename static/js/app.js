@@ -6,7 +6,7 @@
 var angular = window.angular;
 
 angular.module('Controls', []);
-angular.module('TPBSearch', ['Controls']);
+angular.module('TPBSearch', ['goangular']);
 angular.module('Popular', ['goangular']);
 
 angular.module('App', [

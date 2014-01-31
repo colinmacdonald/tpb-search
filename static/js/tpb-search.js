@@ -7,6 +7,11 @@ var _ = window._;
 
 var module = angular.module('TPBSearch');
 
+module.config(function($goConnectionProvider) {
+  var url = 'https://goinstant.net/cmac/goangular';
+  $goConnectionProvider.$set(url);
+});
+
 module.factory('FetchResults', function($http, $q) {
   var service = {
     fetch: function(term) {
@@ -29,10 +34,21 @@ module.factory('FetchResults', function($http, $q) {
   return service;
 });
 
-module.controller('SearchCtrl', function($scope, FetchResults) {
+module.controller('SearchCtrl', function($scope, FetchResults, $goKey) {
+  $scope.results = $goKey('results').$sync();
+
+  $scope.results.$on('ready', function() {
+    console.log('SYNC\'D');
+  });
+
+  $scope.results.$on('error', function() {
+    console.log('FAILURE');
+  });
+
+  window.results = $scope.results;
   $scope.fetchResults = function(term) {
     FetchResults.fetch(term).then(function(data) {
-      $scope.results = data.results;
+      $scope.results.$set(data.results);
     });
   };
 
