@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th ng-click="sort('name')">Name</th>
+    <th ng-click="sort('type')">Type</th>
+    <th ng-click="sort('seeds')">Seeds</th>
+    <th ng-click="sort('peers')">Peers</th>
+  </tr>
+  <tr ng-repeat="result in results | filter:filterName | filter:filterSeeds | orderBy:header">
+    <td><a href="{{ result.link }}">{{ result.name }}</a></td>
+    <td>{{ result.type }}</td>
+    <td>{{ result.seeds }}</td>
+    <td>{{ result.peers }}</td>
+  </tr>
+</table>

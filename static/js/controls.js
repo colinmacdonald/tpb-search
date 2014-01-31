@@ -19,7 +19,7 @@ module.directive('collapse', function() {
         scope.contentVisible = !scope.contentVisible;
       };
     },
-    templateUrl: '../templates/collapse.html'
+    templateUrl: '/templates/collapse.html'
   };
 
   return dir;

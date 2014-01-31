@@ -3,13 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title><%- title %></title>
-    <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+
+    <link type="text/css" rel="stylesheet" href="/css/layout.css" />
     <%- stylesheets %>
 
-    <script type="text/javascript" src="/static/js/vendor/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/vendor/lodash/dist/lodash.min.js"></script>
+    <script type="text/javascript" src="/vendor/angular/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdn.goinstant.net/v1/platform.min.js"></script>
+    <script type="text/javascript" src="https://cdn.goinstant.net/integrations/goangular/latest/goangular.min.js"></script>
   </head>
   <body>
-    Poop
     <%- body %>
 
     <%- scripts %>

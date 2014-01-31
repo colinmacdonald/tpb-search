@@ -2,6 +2,7 @@ config/local.json
 
 node_modules/
 bower_components/
+static/vendor/
 
 .DS_Store
 **/.DS_Store

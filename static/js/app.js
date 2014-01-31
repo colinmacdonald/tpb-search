@@ -6,11 +6,11 @@
 var angular = window.angular;
 
 angular.module('Controls', []);
-angular.module('Search', ['Controls']);
+angular.module('TPBSearch', ['Controls']);
 angular.module('Popular', ['goangular']);
 
 angular.module('App', [
-  'Search',
+  'TPBSearch',
   'Popular'
 ]);
 

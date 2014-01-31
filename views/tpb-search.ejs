@@ -1,0 +1,16 @@
+<% stylesheet('css/search.css') %>
+
+<% script ('js/app.js') %>
+<% script ('js/controls.js') %>
+<% script ('js/tpb-search.js') %>
+<% script ('js/popular.js') %>
+
+<div class="main">
+  <div class="tpb-search" ng-app="App">
+    <div ng-controller="SearchCtrl">
+      <div class="search" search></div>
+      <div class="filters" filter name="name"></div>
+      <div class="results" results></div>
+    </div>
+  </div>
+</div>
