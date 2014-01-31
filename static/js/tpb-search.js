@@ -86,7 +86,7 @@ module.directive('filter', function() {
 module.directive('results', function() {
   var dir = {
     restrict: 'A',
-    link: function(scope) {
+    link: function($scope) {
       $scope.sort = function(header) {
         $scope.header = ($scope.header !== header) ? header : '-' + header;
       };

@@ -54,6 +54,10 @@ collapse .ng-content {
   width: 100%;
 }
 
+.results th {
+  cursor: pointer;
+}
+
 .results tr:first-child {
   background-color: #cccccc;
   margin: 0;
