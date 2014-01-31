@@ -1,8 +1,0 @@
-{
-  "server": {
-    "listen": 5000
-  },
-  "express": {
-    "secret": "shizzle wizzle"
-  }
-}

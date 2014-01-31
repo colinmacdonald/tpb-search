@@ -1,15 +1,23 @@
 {
-  "name": "node-boilerplate",
-  "version": "0.0.1",
+  "name": "grocer",
+  "version": "0.1.0",
+  "description": "Grocery Website",
+  "author": "Colin MacDonald",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "main": "app.js",
   "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
-    "express": "~3.2.5",
-    "ejs": "~0.8.4",
-    "json-config": "0.0.1",
-    "ejs-locals": "~1.0.2",
-    "auto-loader": "0.0.9",
-    "async": "0.2.9",
-    "lodash": "2.2.1",
-    "connect-redis": "1.4.5"
+    "express": "3.3.1",
+    "ejs": "0.8.5",
+    "passport": "0.1.17",
+    "passport-local": "0.1.6",
+    "lodash": "2.4.1",
+    "request": "2.33.0",
+    "jsdom": "0.8.11"
   }
 }
