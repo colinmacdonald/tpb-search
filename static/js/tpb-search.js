@@ -37,15 +37,10 @@ module.factory('FetchResults', function($http, $q) {
 module.controller('SearchCtrl', function($scope, FetchResults, $goKey) {
   $scope.results = $goKey('results').$sync();
 
-  $scope.results.$on('ready', function() {
-    console.log('SYNC\'D');
-  });
+  $scope.results.$on('set', { local: true, listener: function(val, con) {
+    $scope.results.val = val;
+  }});
 
-  $scope.results.$on('error', function() {
-    console.log('FAILURE');
-  });
-
-  window.results = $scope.results;
   $scope.fetchResults = function(term) {
     FetchResults.fetch(term).then(function(data) {
       $scope.results.$set(data.results);
@@ -57,6 +52,7 @@ module.controller('SearchCtrl', function($scope, FetchResults, $goKey) {
       return true;
     }
 
+    console.log(result);
     var contains = result.name.toLowerCase().indexOf($scope.name.toLowerCase());
     return (contains >= 0) ? true : false;
   };
