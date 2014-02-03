@@ -21,7 +21,7 @@ module.factory('FetchResults', function($http, $q) {
         term: term
       };
 
-      $http.get('/fetch', params).success(function(data) {
+      $http.post('/fetch', params).success(function(data) {
         deferred.resolve(data);
       }).error(function() {
         deferred.reject('Failed to Fetch Results.');
@@ -52,7 +52,6 @@ module.controller('SearchCtrl', function($scope, FetchResults, $goKey) {
       return true;
     }
 
-    console.log(result);
     var contains = result.name.toLowerCase().indexOf($scope.name.toLowerCase());
     return (contains >= 0) ? true : false;
   };

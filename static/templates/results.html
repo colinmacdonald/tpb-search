@@ -5,7 +5,7 @@
     <th ng-click="sort('seeds')">Seeds</th>
     <th ng-click="sort('peers')">Peers</th>
   </tr>
-  <tr ng-repeat="result in results.val | filter:filterName | filter:filterSeeds | orderBy:header">
+  <tr ng-repeat="result in results | filter:filterName | filter:filterSeeds | orderBy:header">
     <td><a href="{{ result.link }}">{{ result.name }}</a></td>
     <td>{{ result.type }}</td>
     <td>{{ result.seeds }}</td>
